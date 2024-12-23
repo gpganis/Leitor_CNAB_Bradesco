@@ -69,7 +69,7 @@ def main(page: ft.Page):
     def btn_salvar_arquivo(e):
         if '.ret' in arquivos_selecionados.value:
             dialogo_salvamento_arquivos.save_file(
-                file_name="Resposta_CNAB.xlsx", allowed_extensions=["xlsx"])
+                file_name="Sem_Nome.xlsx", allowed_extensions=["xlsx"])
         else:
             arquivos_selecionados.value = "Nenhum arquivo selecionado!"
             arquivos_selecionados.update()
@@ -95,14 +95,14 @@ def main(page: ft.Page):
     page.overlay.append(dialogo_salvamento_arquivos)
 
     imagem = ft.Image(
-        src=r"C:\Users\gabriel.souza\Desktop\Cnab Bradesco\Bradesco.png", width=150, height=150)
+        src=r"C:\Leitores cnab\Bradesco\Bradesco.ico", width=150, height=150)
 
     btn_selecionar = ft.ElevatedButton(
         text="Selecionar Arquivo",
         width=250,
         height=50,
         bgcolor='#f0152d',
-        color=ft.Colors.WHITE,
+        color=ft.Colors.GREY_100,
         style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=5)),
         on_click=btn_selecionar_arquivo
     )
@@ -111,7 +111,7 @@ def main(page: ft.Page):
         text="Processar Arquivo",
         width=250,
         height=50,
-        bgcolor=ft.Colors.WHITE,
+        bgcolor=ft.Colors.GREY_100,
         color='#f0152d',
         style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=5)),
         on_click=btn_salvar_arquivo,
@@ -136,7 +136,7 @@ def main(page: ft.Page):
     )
 
     coluna = ft.Column(
-        controls=[linha_imagem, linha_textfield, linha_botoes],
+        controls=[linha_imagem, linha_botoes, linha_textfield],
         width=500,
         alignment=ft.MainAxisAlignment.CENTER,
         spacing=20
