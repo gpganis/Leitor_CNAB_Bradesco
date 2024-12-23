@@ -65,7 +65,7 @@ def main(page: ft.Page):
     def btn_salvar_arquivo(e):
         if '.ret' in arquivos_selecionados.value:
             dialogo_salvamento_arquivos.save_file(
-                file_name="Tradução_CNAB.xlsx", allowed_extensions=["xlsx"])
+                file_name="Resposta_CNAB.xlsx", allowed_extensions=["xlsx"])
         else:
             arquivos_selecionados.value = "Nenhum arquivo selecionado!"
             arquivos_selecionados.update()
