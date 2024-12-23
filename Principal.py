@@ -77,7 +77,7 @@ def main(page: ft.Page):
         value=" ",
         read_only=True,
         width=520,
-        prefix_icon=ft.Icons.UPLOAD_FILE,
+        prefix_icon=ft.Icons.ATTACH_FILE,
         text_size=14,
     )
 
