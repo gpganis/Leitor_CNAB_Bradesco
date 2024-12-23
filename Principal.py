@@ -32,6 +32,9 @@ def main(page: ft.Page):
         page.update()
 
     def salvar_arquivo(caminho):
+        if not caminho.endswith('.xlsx'):
+            caminho += '.xlsx'
+
         if conteudo_arquivo.value:
             dados = Tradutor_de_CNAB(conteudo_arquivo.value)
             try:
