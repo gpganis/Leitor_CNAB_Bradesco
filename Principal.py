@@ -123,7 +123,7 @@ def main(page: ft.Page):
     )
 
     coluna = ft.Column(
-        controls=[linha_botoes, linha_textfield],
+        controls=[linha_textfield, linha_botoes],
         width=500,
         alignment=ft.MainAxisAlignment.CENTER,
         spacing=20
