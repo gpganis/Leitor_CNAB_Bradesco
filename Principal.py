@@ -4,7 +4,7 @@ from openpyxl import Workbook
 
 
 def main(page: ft.Page):
-    page.title = "Leitor de CNAB Bradesco"
+    page.title = "Cnab Bradesco"
     page.window.width = 700
     page.window.height = 300
     page.window.center()
