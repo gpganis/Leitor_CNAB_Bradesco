@@ -7,7 +7,7 @@ def main(page: ft.Page):
     page.title = "Cnab Bradesco"
     page.window.width = 700
     page.window.height = 450
-    # page.window.center()
+    page.window.center()
     page.window.resizable = False
     page.window.maximizable = False
     page.bgcolor = ft.Colors.WHITE
@@ -94,7 +94,8 @@ def main(page: ft.Page):
     page.overlay.append(dialogo_selecao_arquivos)
     page.overlay.append(dialogo_salvamento_arquivos)
 
-    imagem = ft.Image(src="Bradesco.ico", width=150, height=150)
+    imagem = ft.Image(
+        src=r"C:\Users\gabriel.souza\Desktop\Cnab Bradesco\Bradesco.png", width=150, height=150)
 
     btn_selecionar = ft.ElevatedButton(
         text="Selecionar Arquivo",
