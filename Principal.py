@@ -6,12 +6,13 @@ from openpyxl import Workbook
 def main(page: ft.Page):
     page.title = "Cnab Bradesco"
     page.window.width = 700
-    page.window.height = 300
-    page.window.center()
+    page.window.height = 450
+    # page.window.center()
     page.window.resizable = False
     page.window.maximizable = False
     page.bgcolor = ft.Colors.WHITE
     page.theme_mode = ft.ThemeMode.LIGHT
+    page.window.to_front()
     page.update()
 
     def resultado_selecao_arquivos(e: ft.FilePickerResultEvent):
@@ -93,11 +94,13 @@ def main(page: ft.Page):
     page.overlay.append(dialogo_selecao_arquivos)
     page.overlay.append(dialogo_salvamento_arquivos)
 
+    imagem = ft.Image(src="Bradesco.ico", width=150, height=150)
+
     btn_selecionar = ft.ElevatedButton(
         text="Selecionar Arquivo",
         width=250,
         height=50,
-        bgcolor=ft.Colors.BLUE_900,
+        bgcolor='#f0152d',
         color=ft.Colors.WHITE,
         style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=5)),
         on_click=btn_selecionar_arquivo
@@ -107,10 +110,16 @@ def main(page: ft.Page):
         text="Processar Arquivo",
         width=250,
         height=50,
-        bgcolor=ft.Colors.GREEN_900,
-        color=ft.Colors.WHITE,
+        bgcolor=ft.Colors.WHITE,
+        color='#f0152d',
         style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=5)),
         on_click=btn_salvar_arquivo,
+    )
+
+    linha_imagem = ft.Row(
+        controls=[imagem],
+        spacing=20,
+        alignment=ft.MainAxisAlignment.CENTER
     )
 
     linha_botoes = ft.Row(
@@ -126,7 +135,7 @@ def main(page: ft.Page):
     )
 
     coluna = ft.Column(
-        controls=[linha_textfield, linha_botoes],
+        controls=[linha_imagem, linha_textfield, linha_botoes],
         width=500,
         alignment=ft.MainAxisAlignment.CENTER,
         spacing=20
