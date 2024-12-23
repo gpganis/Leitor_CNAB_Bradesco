@@ -101,7 +101,7 @@ def main(page: ft.Page):
     )
 
     btn_criar_tabela = ft.ElevatedButton(
-        text="Traduzir Arquivo",
+        text="Processar Arquivo",
         width=250,
         height=50,
         bgcolor=ft.Colors.GREEN_900,
