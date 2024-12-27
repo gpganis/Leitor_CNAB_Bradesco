@@ -95,7 +95,7 @@ def main(page: ft.Page):
     page.overlay.append(dialogo_salvamento_arquivos)
 
     imagem = ft.Image(
-        src=r"C:\Bradesco\Bradesco.ico", width=150, height=150)
+        src=r"C:\Leitor_CNAB_Bradesco-main\Bradesco.ico", width=150, height=150)
 
     btn_selecionar = ft.ElevatedButton(
         text="Selecionar Arquivo",
